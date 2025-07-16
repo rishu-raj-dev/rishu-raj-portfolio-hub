@@ -29,7 +29,19 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
-          {/* Left Content */}
+          {/* Left Content - Profile Image */}
+          <div className="flex-shrink-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <div className="relative">
+              <img 
+                src={profileImage} 
+                alt="Rishu Ravi Raj" 
+                className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-primary/20 shadow-xl hover:shadow-glow transition-all duration-300"
+              />
+              <div className="absolute inset-0 rounded-full bg-gradient-primary/10"></div>
+            </div>
+          </div>
+
+          {/* Right Content */}
           <div className="flex-1 text-center lg:text-left animate-fade-in">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6">
               <span className="block">Rishu Ravi Raj</span>
@@ -92,18 +104,6 @@ const HeroSection = () => {
               >
                 <Mail className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
               </a>
-            </div>
-          </div>
-
-          {/* Right Content - Profile Image */}
-          <div className="flex-shrink-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <div className="relative">
-              <img 
-                src={profileImage} 
-                alt="Rishu Ravi Raj" 
-                className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-primary/20 shadow-xl hover:shadow-glow transition-all duration-300"
-              />
-              <div className="absolute inset-0 rounded-full bg-gradient-primary/10"></div>
             </div>
           </div>
         </div>
