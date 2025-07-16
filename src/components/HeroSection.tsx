@@ -27,81 +27,84 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <div className="animate-fade-in">
-          {/* Profile Image */}
-          <div className="mb-8 flex justify-center">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
+          {/* Left Content */}
+          <div className="flex-1 text-center lg:text-left animate-fade-in">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6">
+              <span className="block">Rishu Ravi Raj</span>
+              <span className="block text-transparent bg-gradient-primary bg-clip-text">
+                DevOps Engineer
+              </span>
+            </h1>
+            
+            <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-8 max-w-2xl lg:max-w-none leading-relaxed">
+              Building scalable infrastructure and automated solutions in the cloud
+            </p>
+
+            <div className="flex items-center justify-center lg:justify-start text-muted-foreground mb-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+              <MapPin className="w-5 h-5 mr-2 text-primary" />
+              <span>Kolkata, WB, India</span>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+              <Button 
+                onClick={() => scrollToSection('contact')}
+                size="lg"
+                className="bg-gradient-primary hover:shadow-primary transition-all duration-300 text-lg px-8 py-3"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Get In Touch
+              </Button>
+              
+              <Button 
+                onClick={() => scrollToSection('about')}
+                variant="outline" 
+                size="lg"
+                className="border-primary text-primary hover:bg-primary/10 transition-all duration-300 text-lg px-8 py-3"
+              >
+                Learn More
+              </Button>
+            </div>
+
+            <div className="flex items-center justify-center lg:justify-start space-x-6 animate-fade-in" style={{ animationDelay: "0.5s" }}>
+              <a
+                href="https://www.linkedin.com/in/rishu-raj-690508190/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-glow group"
+              >
+                <Linkedin className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
+              </a>
+              
+              <a
+                href="https://github.com/rishu-raj007"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-glow group"
+              >
+                <Github className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
+              </a>
+              
+              <a
+                href="mailto:rishuraj331@gmail.com"
+                className="w-12 h-12 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-glow group"
+              >
+                <Mail className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
+              </a>
+            </div>
+          </div>
+
+          {/* Right Content - Profile Image */}
+          <div className="flex-shrink-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <div className="relative">
               <img 
                 src={profileImage} 
                 alt="Rishu Ravi Raj" 
-                className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-primary/20 shadow-xl hover:shadow-glow transition-all duration-300"
+                className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-primary/20 shadow-xl hover:shadow-glow transition-all duration-300"
               />
               <div className="absolute inset-0 rounded-full bg-gradient-primary/10"></div>
             </div>
-          </div>
-          
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6">
-            <span className="block">Rishu Ravi Raj</span>
-            <span className="block text-transparent bg-gradient-primary bg-clip-text">
-              DevOps Engineer
-            </span>
-          </h1>
-          
-          <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Building scalable infrastructure and automated solutions in the cloud
-          </p>
-
-          <div className="flex items-center justify-center text-muted-foreground mb-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <MapPin className="w-5 h-5 mr-2 text-primary" />
-            <span>Kolkata, WB, India</span>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <Button 
-              onClick={() => scrollToSection('contact')}
-              size="lg"
-              className="bg-gradient-primary hover:shadow-primary transition-all duration-300 text-lg px-8 py-3"
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              Get In Touch
-            </Button>
-            
-            <Button 
-              onClick={() => scrollToSection('about')}
-              variant="outline" 
-              size="lg"
-              className="border-primary text-primary hover:bg-primary/10 transition-all duration-300 text-lg px-8 py-3"
-            >
-              Learn More
-            </Button>
-          </div>
-
-          <div className="flex items-center justify-center space-x-6 animate-fade-in" style={{ animationDelay: "0.5s" }}>
-            <a
-              href="https://www.linkedin.com/in/rishu-raj-690508190/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-glow group"
-            >
-              <Linkedin className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
-            </a>
-            
-            <a
-              href="https://github.com/rishu-raj007"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-glow group"
-            >
-              <Github className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
-            </a>
-            
-            <a
-              href="mailto:rishuraj331@gmail.com"
-              className="w-12 h-12 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-glow group"
-            >
-              <Mail className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
-            </a>
           </div>
         </div>
 
